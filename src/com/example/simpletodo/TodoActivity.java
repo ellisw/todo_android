@@ -29,7 +29,7 @@ public class TodoActivity extends Activity {
 		lvItems = (ListView) findViewById(R.id.lvItems);
 		etNewItem = (EditText) findViewById(R.id.etNewItem);
 		readItems();
-		aTodoItems = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, todoItems);
+		aTodoItems = new ListWithButtonAdaptor(this, R.layout.item_row, todoItems);
 		lvItems.setAdapter(aTodoItems);
 		setupListViewListener();
 	}
